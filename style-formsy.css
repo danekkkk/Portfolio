@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: montserrat;
+    background-image: url("background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#formularz-kontakt {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 700px;
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 10px black;
+}
+
+#formularz-kontakt h1{
+    text-align: center;
+    padding: 0 0 30px 0;
+    border-bottom: 1px solid silver;
+}
+
+#formularz-kontakt form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .field{
+    position: relative;
+    margin: 30px 0;
+}
+
+
+
+
+.do-wybrania {
+    font-weight: 600;
+}
+
+input[type="submit"]{
+    width: 50%;
+    height: 50px;
+    border: 1px solid;
+    background: #6200ee;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+input[type="submit"]:hover{
+    border: #6200ee;
+    transition: .5s;
+    box-shadow: 0px 0px 10px #6200ee;
+    border: 1px solid #6200ee;
+    color: #dde9f0;
+}
+
+input[type="reset"]{
+    width: 45%;
+    height: 50px;
+    border: 1px solid;
+    background: #6200ee;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+input[type="reset"]:hover{
+    border: #50036200eebd;
+    transition: .5s;
+    box-shadow: 0px 0px 10px #6200ee;
+    border: 1px solid #6200ee;
+    color: #dde9f0;
+}
+
+.sendandreset {
+    display: inline;
+    box-sizing: content-box;
+    margin-bottom: 30px;
+    padding: 10px 0 10px 0;
+}
+
+#footer {
+    margin-top: 15px;
+}
+
+
+.mdc-text-field {
+    width: 100% !important;
+    resize: none !important;
+}
+:root{
+    --mdc-theme-secondary: #6200ee !important;
+}
+
+.mdc-radio {
+    padding: calc((10px - 5px) / 2) !important;
+}
+
+.mdc-radio__background{
+    top: 4px;
+    left: 5px;
+}
+
+.mdc-checkbox--touch {
+    margin: calc((var(--mdc-checkbox-state-layer-size, -1px) - var(--mdc-checkbox-state-layer-size, 5px)) / 2) !important;
+}
+
+.mdc-checkbox__background{
+    top: 15px !important;
+    left: 15px !important;
+}
+
+@media (max-width: 1000px) {
+    #formularz-kontakt {
+        position: static !important;
+        left: 0% !important;
+        transform: translate(0%) !important;
+        width: 100% !important;
+        height: 100%;
+        background-color: white;
+        border-radius: 0 !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+    }
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: white !important;
+        background-image: none;
+    }
+}
+
+@media (max-width: 620px) {
+    div.sendandreset {
+        display: block !important;
+        margin: 10px !important;
+        padding: 0 !important;
+    }
+    .sendandreset input {
+        width: 100% !important;
+    }
+}
