@@ -121,7 +121,7 @@ input[type="reset"]:hover{
     left: 15px !important;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
     #formularz-kontakt {
         position: static !important;
         left: 0% !important;
