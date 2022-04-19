@@ -209,14 +209,25 @@ img {
 
 @media (max-width: 1000px){
     #navbar ul {
-        width: 100%;
-        font-size: 0.9rem;
+        width: 100% !important;
+        font-size: 1.0rem !important;
+        overflow: hidden !important;
+    }
+    main {
+        width: 100% !important;
     }
     .message {
         font-size: 1.5rem;
     }
     div.my-information p{
         font-size: 1.4rem;
+    }
+}
+
+@media (max-width:750px){
+    #navbar {
+        width: 100%;
+        overflow: hidden !important;
     }
 }
 
@@ -249,7 +260,7 @@ img {
     #navbar ul {
         display: flex;
         padding: 10px 0;
-        margin: 0:
+        margin: 0 !important;
     }
     #navbar {
         position: sticky;
@@ -287,12 +298,11 @@ img {
         display: block;
         justify-content: center;
     }
-    .about-container {
-        display: block !important;
-        justify-content: center;
-    }
     div.message.my-information {
-        text-align: center !important;
+        text-align: left !important;
+        width: 60% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 }
 
@@ -314,7 +324,7 @@ img {
         font-size: 1.4rem !important;
     }
     .message img {
-        width: 55%;
+        width: 50%;
     }
     #navbar ul li a:hover{
     color: black;
@@ -330,7 +340,10 @@ img {
         margin-right: 10px !important;
     }
     div.message.my-information {
-        text-align: center !important;
+        text-align: left !important;
+        width: 50% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
     #navbar ul li a {
         margin-left: 5px;
