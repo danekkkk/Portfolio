@@ -33,145 +33,10 @@ body {
 #navbar ul li a {
     margin-left: 3px;
     color: black;
-    opacity: 0.7;
+    opacity: 0.5;
     font-size: 1.2rem;
     font-family: "Poppins", Arial, Helvetica, sans-serif;
     text-decoration: none;
-}
-
-@media (max-width: 700px){
-    #navbar {
-        height: auto;
-        width: 100%;
-    }
-    #navbar ul {
-        display: flex;
-        width: 100%;
-        text-align: center;
-    }
-    div.my-information p{
-        font-size: 1.2rem !important;
-    }
-    #intro {
-        height: 200px !important;
-    }
-    .message {
-        font-size: 1.4rem !important;
-    }
-    .image-box a img {
-        width: 400px !important;
-        height: 200px !important;
-    }
-}
-
-@media (max-width: 650px){
-    #navbar ul {
-        display: flex;
-        padding: 10px 0;
-        margin: 0:
-    }
-    #navbar {
-        position: sticky;
-        height: auto;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-    #navbar ul li a {
-        margin-left: 5px;
-        font-size: 0.7rem;
-    }
-    .heading {
-        font-size: 1.6rem !important;
-    }
-    .message {
-        display: block !important;
-        margin: 0px !important;
-        width: 100% !important;
-        justify-content: center !important;
-        align-items: center !important;
-        font-size: 1.5rem !important;
-        font-family: "Poppins", Arial, Helvetica, sans-serif;
-        text-align: center;
-    }
-    .message img {
-        width: 50%;
-    }
-    #welcome {
-        display: block !important;
-        margin: 0px !important;
-        justify-content: center;
-    }
-    .about-container {
-        display: block;
-        justify-content: center;
-    }
-    .about-container {
-        display: block !important;
-        justify-content: center;
-        margin-right: 10px !important;
-    }
-    div.message.my-information {
-        text-align: center !important;
-    }
-}
-
-@media (max-width: 500px){
-    div.my-information p{
-        font-size: 0.9rem !important;
-    }
-    #intro {
-        height: 100px !important;
-    }
-    .message {
-        font-size: 1.1rem !important;
-    }
-    .image-box a img {
-        width: 300px !important;
-        height: 150px !important;
-    }
-    .heading {
-        font-size: 1.4rem !important;
-    }
-    .message img {
-        width: 55%;
-    }
-    #navbar ul li a:hover{
-    color: black;
-    opacity: 1;
-    text-decoration: underline;
-    }
-    #navbar ul li a span:hover{
-        font-size: 12px !important;
-    }
-    .about-container {
-        display: block !important;
-        justify-content: center;
-        margin-right: 10px !important;
-    }
-    div.message.my-information {
-        text-align: center !important;
-    }
-}
-
-@media (max-width: 1200px){
-    #navbar ul {
-        width: 70%;
-        font-size: 1rem
-    }
-}
-
-@media (max-width: 1000px){
-    #navbar ul {
-        width: 100%;
-        font-size: 0.9rem;
-    }
-    .message {
-        font-size: 1.5rem;
-    }
-    div.my-information p{
-        font-size: 1.4rem;
-    }
 }
 
 #navbar ul li a:hover{
@@ -180,8 +45,8 @@ body {
     text-decoration: underline;
 }
 #navbar ul li a span:hover{
-    font-size: 1.3rem;
-    transition: all 0.15s;
+    /* font-size: 1.3rem; */
+    transition: all 0.25s;
 }
 
 #intro {
@@ -329,8 +194,153 @@ img {
 .button {
     box-shadow: 10px 10px 15px -5px rgba(0, 0, 0, 0.7);
 }
- 
+
 .image-box:hover {
     transform: scale(1.05,1.05);
     transition: all 0.15s;
+}
+
+@media (max-width: 1200px){
+    #navbar ul {
+        width: 70%;
+        font-size: 1rem
+    }
+}
+
+@media (max-width: 1000px){
+    #navbar ul {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+    .message {
+        font-size: 1.5rem;
+    }
+    div.my-information p{
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 700px){
+    #navbar {
+        height: auto;
+        width: 100%;
+    }
+    #navbar ul {
+        display: flex;
+        width: 100%;
+        text-align: center;
+    }
+    div.my-information p{
+        font-size: 1.2rem !important;
+    }
+    #intro {
+        height: 200px !important;
+    }
+    .message {
+        font-size: 1.4rem !important;
+    }
+    .image-box a img {
+        width: 400px !important;
+        height: 200px !important;
+    }
+}
+
+@media (max-width: 650px){
+    #navbar ul {
+        display: flex;
+        padding: 10px 0;
+        margin: 0:
+    }
+    #navbar {
+        position: sticky;
+        height: auto;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    #navbar ul li a {
+        margin-left: 5px;
+        font-size: 1.1rem;
+    }
+    .heading {
+        font-size: 1.6rem !important;
+    }
+    .message {
+        display: block !important;
+        margin: 0px !important;
+        width: 100% !important;
+        justify-content: center !important;
+        align-items: center !important;
+        font-size: 1.5rem !important;
+        font-family: "Poppins", Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+    .message img {
+        width: 50%;
+    }
+    #welcome {
+        display: block !important;
+        margin: 0px !important;
+        justify-content: center;
+    }
+    .about-container {
+        display: block;
+        justify-content: center;
+    }
+    .about-container {
+        display: block !important;
+        justify-content: center;
+    }
+    div.message.my-information {
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 500px){
+    div.my-information p{
+        font-size: 0.9rem !important;
+    }
+    #intro {
+        height: 100px !important;
+    }
+    .message {
+        font-size: 1.1rem !important;
+    }
+    .image-box a img {
+        width: 300px !important;
+        height: 150px !important;
+    }
+    .heading {
+        font-size: 1.4rem !important;
+    }
+    .message img {
+        width: 55%;
+    }
+    #navbar ul li a:hover{
+    color: black;
+    opacity: 1;
+    text-decoration: underline;
+    }
+    /* #navbar ul li a span:hover{
+        font-size: 12px !important;
+    } */
+    .about-container {
+        display: block !important;
+        justify-content: center !important;
+        margin-right: 10px !important;
+    }
+    div.message.my-information {
+        text-align: center !important;
+    }
+    #navbar ul li a {
+        margin-left: 5px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 400px){
+    #navbar ul li a {
+        margin-left: 5px;
+        font-size: 0.7rem;
+    }
 }
