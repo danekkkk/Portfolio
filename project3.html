@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Link shortener</title>
     <link rel="stylesheet" href="style-project3.css">
-    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="shortcut icon" href="makeItShorter.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -21,11 +21,11 @@
                 <input type="text" id="source-link" placeholder="Paste link here:">
                 <button id="generate-button">Generate</button>
                 <!-- <div class="link">Code: <span id="code"></span></div> -->
-                <div id="link" class="link">LINK 1: <span id="full-short-link"></span> <button onclick="copyFunction()" id="copy"><i
+                <div id="link" class="link">SHRTCODE: <span id="full-short-link"></span> <button onclick="copyFunction()" id="copy"><i
                             class="fas fa-copy"></i></button></div>
-                <div id="link2" class="link">LINK 2: <span id="full-short-link2"></span> <button onclick="copyFunction2()" id="copy2"><i
+                <div id="link2" class="link">9QER.DE: <span id="full-short-link2"></span> <button onclick="copyFunction2()" id="copy2"><i
                             class="fas fa-copy"></i></button></div>
-                <div id="link3" class="link">LINK 3: <span id="full-short-link3"></span> <button onclick="copyFunction3()" id="copy3"><i
+                <div id="link3" class="link">SHINE.LINK: <span id="full-short-link3"></span> <button onclick="copyFunction3()" id="copy3"><i
                             class="fas fa-copy"></i></button> </div>
             </div>
         </div>
@@ -57,7 +57,8 @@
             document.getElementById("link2").style.display = "block";
             document.getElementById("link3").style.display = "block";
             // document.getElementById(id).innerHTML = "<a href='" + shortUrl + "'>" + shortUrl + "</a>";
-            document.getElementById(id).innerHTML = "<input id='myInput' readonly value='" + shortUrl + "'>";
+            // document.getElementById(id).innerHTML = "<input id='myInput' readonly value='" + shortUrl + "'>";
+            document.getElementById(id).innerHTML = "<input id='myInput' readonly value='" + shortUrl + "'><a class='go-to-page' target='_blank' href='" + shortUrl + "'><i class='fa-solid fa-circle-arrow-right'></i></a>";
         }
 
         function copyFunction() {
