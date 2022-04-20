@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link shortener</title>
+    <link rel="stylesheet" href="style-project3.css">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <main>
+        <div id="link-shortener-div">
+            <h2>Link shortener</h2>
+            <div class="contener">
+                <input type="text" id="source-link" placeholder="Paste link here:">
+                <button id="generate-button">Generate</button>
+                <!-- <div class="link">Code: <span id="code"></span></div> -->
+                <div id="link" class="link">LINK 1: <span id="full-short-link"></span> <button onclick="copyFunction()" id="copy"><i
+                            class="fas fa-copy"></i></button></div>
+                <div id="link2" class="link">LINK 2: <span id="full-short-link2"></span> <button onclick="copyFunction2()" id="copy2"><i
+                            class="fas fa-copy"></i></button></div>
+                <div id="link3" class="link">LINK 3: <span id="full-short-link3"></span> <button onclick="copyFunction3()" id="copy3"><i
+                            class="fas fa-copy"></i></button> </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        window.onload = function () {
+            document.getElementById("generate-button")
+                .addEventListener("click", generateLinks);
+        }
+
+        function generateLinks() {
+            let url = document.getElementById("source-link").value;
+            fetch("https://api.shrtco.de/v2/shorten?url=" + url)
+                .then(response => response.json())
+                .then(data => linksReady(data));
+        }
+
+        function linksReady(data) {
+            console.log(data);
+            let result = data.result;
+            // setLinkToDomEl("code", result.code);
+            setLinkToDomEl("full-short-link", result.full_short_link);
+            setLinkToDomEl("full-short-link2", result.full_short_link2);
+            setLinkToDomEl("full-short-link3", result.full_short_link3);
+        }
+
+        function setLinkToDomEl(id, shortUrl) {
+            document.getElementById("link").style.display = "block";
+            document.getElementById("link2").style.display = "block";
+            document.getElementById("link3").style.display = "block";
+            // document.getElementById(id).innerHTML = "<a href='" + shortUrl + "'>" + shortUrl + "</a>";
+            document.getElementById(id).innerHTML = "<input id='myInput' readonly value='" + shortUrl + "'>";
+        }
+
+        function copyFunction() {
+            var copyText = document.getElementsByTagName("input")[1];
+            console.log(copyText);
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); /* For mobile devices */
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyFunction2() {
+            var copyText = document.getElementsByTagName("input")[2];
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); /* For mobile devices */
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyFunction3() {
+            var copyText = document.getElementsByTagName("input")[3];
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); /* For mobile devices */
+            navigator.clipboard.writeText(copyText.value);
+        }
+    </script>
+</body>
+
+</html>
