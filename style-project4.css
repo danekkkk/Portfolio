@@ -50,3 +50,7 @@ body {
       font-weight: 700;
       opacity: 1;
   }
+
+  body div {
+    padding: 10px;
+}
