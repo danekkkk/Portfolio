@@ -21,7 +21,7 @@
     <div class="header d-flex flex-column align-items-center">
         <h1 class="display-6 mt-3 mb-0">Gallery Template</h1>
         <p class="lead mt-2 mb-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, perspiciatis voluptatum? Adipisci libero fugit quae doloribus quasi perferendis repellendus! Cumque ipsa optio dolor porro omnis.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, perspiciatis voluptatum? Lorem ipsum dolor sit. Lorem ipsum dolor sit amet.
         </p>
         <a class="btn mb-5 btn-outline-primary" href="https://github.com/danekkkk"
             target="_blank">My Github</a>
@@ -57,14 +57,14 @@
                         <img class="img-responsive"
                             src="https://cdn.pixabay.com/photo/2017/08/07/16/36/cat-2605502_960_720.jpg" />
                     </a>
-                    <a data-lg-size="720-480" data-pinterest-text="Pin it3" data-tweet-text="lightGallery slide  4"
+                    <a data-lg-size="960-640" data-pinterest-text="Pin it3" data-tweet-text="lightGallery slide  4"
                         class="gallery-item"
                         data-src="https://cdn.pixabay.com/photo/2022/05/09/17/08/mute-swan-7185076_960_720.jpg"
                         data-sub-html="<h4>Photo by - <a href='https://pixabay.com/photos/mute-swan-lake-swan-bird-7185076/' >naturepic</a></h4><p>  swan</p>">
                         <img class="img-responsive"
                             src="https://cdn.pixabay.com/photo/2022/05/09/17/08/mute-swan-7185076_960_720.jpg" />
                     </a>
-                    <a data-lg-size="1600-1067" data-pinterest-text="Pin it3" data-tweet-text="lightGallery slide  4"
+                    <a data-lg-size="960-640" data-pinterest-text="Pin it3" data-tweet-text="lightGallery slide  4"
                         class="gallery-item"
                         data-src="https://cdn.pixabay.com/photo/2020/03/24/20/53/aurora-borealis-4965488_960_720.jpg"
                         data-sub-html="<h4>Photo by - <a href='https://pixabay.com/photos/aurora-borealis-northern-lights-4965488/' >KevinSchmid</a></h4><p>Description: Aurora Borealis </p>">
@@ -161,29 +161,30 @@
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.3/plugins/thumbnail/lg-thumbnail.umd.js"></script>
     <script>
         jQuery("#animated-thumbnails-gallery")
-            .justifiedGallery({
-                captions: false,
-                lastRow: "hide",
-                rowHeight: 180,
-                margins: 5
-            })
-            .on("jg.complete", function () {
-                window.lightGallery(
-                    document.getElementById("animated-thumbnails-gallery"), {
-                        autoplayFirstVideo: false,
-                        pager: false,
-                        galleryId: "nature",
-                        plugins: [lgThumbnail],
-                        mobileSettings: {
-                            controls: false,
-                            showCloseIcon: false,
-                            download: false,
-                            rotate: false
-                        }
-                    }
-                );
-            });
-    </script>
+  .justifiedGallery({
+    captions: false,
+    lastRow: "hide",
+    rowHeight: 180,
+    margins: 5
+  })
+  .on("jg.complete", function () {
+    window.lightGallery(
+      document.getElementById("animated-thumbnails-gallery"),
+      {
+        autoplayFirstVideo: false,
+        pager: false,
+        galleryId: "nature",
+        plugins: [lgThumbnail],
+        mobileSettings: {
+          controls: false,
+          showCloseIcon: false,
+          download: false,
+          rotate: false
+        }
+      }
+    );
+  });
+  </script>
 </body>
 
 </html>
